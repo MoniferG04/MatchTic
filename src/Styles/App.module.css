@@ -1,0 +1,11 @@
+.app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-image: url('https://imgs.search.brave.com/KsAY8eLBHh1xOKrKW68N0jEbpni7WFn5vZPq6YPjvpQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2ZjLzUy/L2NmL2ZjNTJjZjkw/ZjlmMTc0NWMwZjlk/N2I3M2ZmNWJjNDI1/LmpwZw');
+  background-size: cover;
+}

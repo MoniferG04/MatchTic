@@ -45,6 +45,11 @@ export function NavBar() {
                         Reporte
                     </Link>
                 </li>
+                <li>
+                    <Link to="/" replace>
+                        Cerra Sesión
+                    </Link>
+                </li>
                 <li
                     style={{ margin: "0 !important" }}
                     onMouseEnter={handleMenuOpen}

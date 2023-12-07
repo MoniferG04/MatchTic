@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from "../Styles/Sign.module.css";
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
 
 
 export function Sign() {
@@ -21,11 +24,13 @@ export function Sign() {
     };
 
     return (
-        <div className={styles.form}>
-            <h1>LOGIN</h1>
-            <form onSubmit={handleSubmit}>
-                <input
-                    name="correo"
+        <div className={styles.loginContainer}>
+            <form className={styles.loginCard} onSubmit={handleSubmit}>
+                <h1>LOGIN</h1>
+
+                <TextField
+                    id="correo"
+                    label="correo"
                     type="email"
                     placeholder="Correo"
                     minLength={13}
@@ -33,36 +38,37 @@ export function Sign() {
                     value={correo}
                     onChange={(e) => setCorreo(e.target.value)}
                 />
-                <input
-                    name="password"
+
+                <TextField
+                    required
+                    id="password"
+                    label="Contraseña"
                     type="password"
-                    placeholder="Contraseña"
+                    placeholder="contraseña"
+                    autoComplete="current-password"
                     minLength={8}
                     maxLength={20}
-                    required
                     value={contraseña}
                     onChange={(e) => setPassword(e.target.value)}
                 />
 
 
-                <button className={styles.Blogin} type="submit">
-                    Iniciar Sesión
-                </button>
-
+                <Button type='submit' variant="contained" endIcon={<SendIcon />}>
+                    Send
+                </Button>
+                <div style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
+                    <a
+                    >
+                        ¿No tienes cuenta? Registrate aquí
+                    </a>
+                    <a
+                    >
+                        Recuperar constraseña
+                    </a>
+                </div>
             </form>
 
-            <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
-                <button
-                    className={styles.Bregistro}
-                >
-                    ¿No tienes cuenta? Registrate aquí
-                </button>
-                <button
-                    className={styles.Bregistro}
-                >
-                    Recuperar constraseña
-                </button>
-            </div>
+
         </div>
     );
 };
