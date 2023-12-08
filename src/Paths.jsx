@@ -1,12 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 import { Sign } from "./Pages/Sign";
 import { Dashboard } from "./Pages/Dashboard";
+import { GenerateTuto } from "./Pages/GenerateTuto";
+import { SearchCourse } from "./Pages/SearchCourse";
 
 export function Path() {
   return (
     <Routes>
       <Route
-        path="/Dashboard"
+        path="/Dashboard/*"
         element={
           <Dashboard />
         }
@@ -21,12 +23,18 @@ export function PathsDashboard() {
   return (
     <Routes>
 
-      {/* <Route
-        path="/Reportes"
+      <Route
+        path="/GenerateTuto"
         element={
-          <Dashboard />
+          <GenerateTuto />
         }
-      /> */}
+      />
+      <Route
+        path="/SearchCourse"
+        element={
+          <SearchCourse />
+        }
+      />
     </Routes>
   );
 }

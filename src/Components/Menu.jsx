@@ -24,60 +24,57 @@ export function NavBar() {
         >
             <List>
 
-                <ul className="flex flex-col gap-5 mx-3">
+                <ul className="flex flex-col gap-3 mx-3 width-auto">
                     <li>
-                        <Link to="/" replace className="flex items-center gap-2">
-                            <h1><b>MatchTic</b></h1>
-                        </Link>
+                        <h1 className="text-2xl flex justify-center"><b>MatchTic</b></h1>
+                    
                     </li>
                     <li>
-                        <Link to="/" replace className="flex items-center gap-2">
+                        <Link to="/" replace className="flex items-center gap-1">
                             <FaHome />
                             Inicio
                         </Link>
                     </li>
+                    
+                    {/* Aqui va validacion de visualizacion */}
                     <li>
-                        <Link to="/Dashboard/CargueDatos" replace className="flex items-center gap-2">
+                        <Link to="/Dashboard/GenerateTuto" replace className="flex items-center gap-1">
                             <BiSolidAnalyse />
                             Generar tutoria
                         </Link>
                     </li>
                     <li>
-                        <Link to="/Dashboard/Estadisticas" replace className="flex items-center gap-2">
+                        <Link to="/Dashboard/SearchCourse" replace className="flex items-center gap-1">
                             <FaSearch />
                             Buscar Curso
                         </Link>
                     </li>
                     <li>
-                        <Link to="/Dashboard/Estadisticas" replace className="flex items-center gap-2">
+                        <Link to="/Dashboard/Estadisticas" replace className="flex items-center gap-1">
                             <MdPersonSearch />
                             Buscar horario estudiante
                         </Link>
                     </li>
+
+                    {/*Hasta aqui va validacion de visualizacion */}
+
                     <li>
-                        <Link to="/Dashboard/Reporte" replace className="flex items-center gap-2">
+                        <Link to="/Dashboard/Reporte" replace className="flex items-center gap-1">
                             <FaBook />
                             Horario inscrito
                         </Link>
                     </li>
                     <li>
-                        <Link to="/" replace className="flex items-center gap-2">
+                        <Link to="/" replace className="flex items-center gap-1">
                             <BsBoxArrowLeft />
                             Cerra Sesión
                         </Link>
                     </li>
                     <li>
-                        <Link to="/" replace className="flex items-center gap-2">
+                        <Link to="/" replace className="flex items-center gap-1">
                             <FaUserTie />
                             Monica Gomez
                         </Link>
-                    </li>
-                    <li
-                        style={{ margin: "0 !important" }}
-                        onMouseEnter={handleMenuOpen}
-                        onMouseLeave={handleMenuClose}
-                        className={style.menuLink}
-                    >
                     </li>
                 </ul>
             </List>
@@ -106,8 +103,8 @@ export function NavBar() {
 
     return (
         <div>
-            <Button onClick={() => setState(true)} style={{ position: 'absolute', top: 0, left: 0, zIndex: 1, }}>
-                <FaThList style={{ fontSize: '30px' }} />
+            <Button onClick={() => setState(true)} style={{padding: '0', minWidth: '10vh', marginTop:'3vh'}}>
+                <FaThList style={{ fontSize: '5vh', color: 'black'}} />
             </Button>
             <SwipeableDrawer
                 anchor='left'
