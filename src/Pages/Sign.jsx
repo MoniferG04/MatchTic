@@ -26,7 +26,7 @@ export function Sign() {
     return (
         <div className={styles.loginContainer}>
             <form className={styles.loginCard} onSubmit={handleSubmit}>
-                <h1>LOGIN</h1>
+                <h1>Iniciar Sesion</h1>
 
                 <TextField
                     id="correo"

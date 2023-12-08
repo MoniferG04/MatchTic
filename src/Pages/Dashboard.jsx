@@ -7,11 +7,11 @@ export function Dashboard() {
 
   return (
     <div className={styles.dashboard}>
-      <header>
+      <header >
         <NavBar/>
       </header>
       <body>
-        <h1>Dashboard</h1>
+      <h1>Dashboard</h1>
       <PathsDashboard/>
       </body>
     </div>
