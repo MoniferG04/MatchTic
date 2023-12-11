@@ -29,6 +29,7 @@ export function PathsDashboard() {
           <GenerateTuto />
         }
       />
+
       <Route
         path="/SearchCourse"
         element={

@@ -67,7 +67,7 @@ export function Tutoship() {
                 <TableCell
                   key={column.id}
                   align={column.align}
-                  style={{ maxWidth: column.maxWidth, background: 'lightblue' }}>
+                  style={{ maxWidth: column.maxWidth, background: '#2CA58D' }}>
                   {column.label}
                 </TableCell>
               ))}

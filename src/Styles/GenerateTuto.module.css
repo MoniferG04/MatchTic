@@ -1,5 +1,6 @@
 .container{
     display: flex;
+    justify-content: flex-end;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -7,6 +8,12 @@
 
 .container > h1{
     font-size: 2.5rem;
-    margin: 1rem;
+    margin-bottom: 1.1rem 0;
     color: black;
+}
+
+.search{
+    width: 30vw;
+    position: relative;
+    left: 25vw;
 }

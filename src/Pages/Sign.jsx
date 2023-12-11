@@ -16,7 +16,7 @@ export function Sign() {
         e.preventDefault();
 
         try {
-            navigate("/Dashboard", { replace: true });
+            navigate("/Dashboard/GenerateTuto", { replace: true });
         } catch (error) {
 
         } finally {
@@ -53,7 +53,7 @@ export function Sign() {
                 />
 
 
-                <Button type='submit' variant="contained" endIcon={<SendIcon />}>
+                <Button style={{background: '#0a2342'}} type='submit' variant="contained" endIcon={<SendIcon />}>
                     Send
                 </Button>
                 <div style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
