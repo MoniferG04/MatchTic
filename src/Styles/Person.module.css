@@ -6,11 +6,18 @@
     flex-direction: column;
 }
 
+.celdas{
+    text-align: center !important;
+}
+
 .acciones{
-    width: 60%;
     display: flex;
-    gap: 4vh;
+    justify-content: center;
+}
+
+.cabecera{
+    display: flex;
     justify-content: space-evenly;
-    padding-bottom: 1vw;
-    border-bottom: 1.5px solid rgb(146, 146, 146);
+    gap: 5vw;
+    margin-bottom: 4vh;
 }

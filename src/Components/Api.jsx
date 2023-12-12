@@ -34,8 +34,9 @@ class ServerRequest {
   }
 
   async getViewCourses(id) {
+    console.log("aqui estoy", id);
     try {
-      const response = await fetch(`http://localhost:8080/curso/${id}`, {
+      const response = await fetch(`http://localhost:8080/course/${id}`, {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
@@ -94,9 +95,8 @@ class ServerRequest {
         },
         body: JSON.stringify(formData), // Enviar los datos del formulario en el cuerpo
       });
-  
+
       const data = await response.json();
-      console.log(data);
       return data;
     } catch (error) {
       console.error("Error en la petición POST:", error);

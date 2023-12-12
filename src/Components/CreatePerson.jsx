@@ -27,8 +27,8 @@ export function CreatePerson() {
         console.log(formData);
         try {
             const data = serverRequest.postCreatePerson(formData);
-            navigate("/Dashboard/Person", { replace: true });
-        } catch (error) {
+             navigate("/Dashboard/Person", { replace: true });
+       } catch (error) {
 
         } finally {
         }

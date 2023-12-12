@@ -1,8 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 import { Tutoship } from '../Components/Tutoship';
 import { Search } from '../Components/Search';
 import styles from "../Styles/GenerateTuto.module.css";
 import ServerRequest from '../Components/Api';
+import Typography from '@mui/material/Typography';
 
 export function SearchCourse() {
 
@@ -31,8 +32,6 @@ export function SearchCourse() {
         try {
             const data = await serverRequest.getViewCourses(id);
             setHorario(data);
-            console.log(horario);
-            console.log(data);
         } catch (error) {
             console.error("Error en la solicitud de carga:", error);
         }
@@ -54,7 +53,10 @@ export function SearchCourse() {
                     }}
                 />
             </div>
-            <h1><b>Buscar Horario</b></h1>
+            <Typography variant="h3" gutterBottom sx={{ textAlign: 'center', color: '#0A2342' }}>
+                <b>Buscar Horario</b>
+            </Typography>
+
             <Tutoship horario={horario} />
         </div>
     );

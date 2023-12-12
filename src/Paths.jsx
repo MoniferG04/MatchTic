@@ -4,7 +4,6 @@ import { Dashboard } from "./Pages/Dashboard";
 import { GenerateTuto } from "./Pages/GenerateTuto";
 import { SearchCourse } from "./Pages/SearchCourse";
 import { Person } from "./Pages/Person";
-import { CreatePerson } from "./Components/CreatePerson";
 import { EditPerson } from "./Components/EditPerson";
 import { StudentSchedule } from "./Pages/StudentSchedule";
 
@@ -61,14 +60,7 @@ export function PathsPerson() {
 
   return (
     <Routes>
-      <Route
-        path="/CreatePerson"
-        element={
-          <CreatePerson />
-        }
-      />
-
-      <Route
+            <Route
         path="/EditPerson"
         element={
           <EditPerson />

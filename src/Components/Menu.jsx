@@ -51,7 +51,7 @@ export function NavBar() {
                     </li>
                     <li>
                         <Link to="/Dashboard/StudentSchedule" replace className="flex items-center gap-1">
-                            <MdPersonSearch />
+                            <FaUserTie />
                             Buscar horario estudiante
                         </Link>
                     </li>
@@ -67,21 +67,9 @@ export function NavBar() {
                     </li>
                    
                     <li>
-                        <Link to="/Dashboard/Reporte" replace className="flex items-center gap-1">
-                            <FaBook />
-                            Horario inscrito
-                        </Link>
-                    </li>
-                    <li>
                         <Link to="/" replace className="flex items-center gap-1">
                             <BsBoxArrowLeft />
                             Cerra Sesión
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/" replace className="flex items-center gap-1">
-                            <FaUserTie />
-                            Monica Gomez
                         </Link>
                     </li>
                 </ul>

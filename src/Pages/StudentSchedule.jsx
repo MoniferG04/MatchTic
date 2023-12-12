@@ -18,7 +18,12 @@ export function StudentSchedule() {
 
         try {
             const data = await serverRequest.getStudent();
-            setStudents(data.estudiantes);
+            // Transformar los datos
+            const transformedData = data.estudiantes.map((persona) => ({
+                id: persona.id,
+                nombre: `${persona.nombre} ${persona.apellido}`, // Concatenar nombre y apellido
+            }));
+            setStudents(transformedData);
         } catch (error) {
             console.error("Error en la solicitud de carga:", error);
         }
@@ -52,7 +57,7 @@ export function StudentSchedule() {
                     onIdChange={(newId) => {
                         setId(newId);
                     }}
-                />            
+                />
             </div>
             <h1><b>Buscar Horario</b></h1>
             <Tutoship horario={horario} />
