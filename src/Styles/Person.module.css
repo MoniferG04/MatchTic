@@ -1,0 +1,16 @@
+.container{
+    width: inherit;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.acciones{
+    width: 60%;
+    display: flex;
+    gap: 4vh;
+    justify-content: space-evenly;
+    padding-bottom: 1vw;
+    border-bottom: 1.5px solid rgb(146, 146, 146);
+}

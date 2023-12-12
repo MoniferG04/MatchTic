@@ -27,15 +27,15 @@ export function NavBar() {
                 <ul className="flex flex-col gap-3 mx-3 width-auto">
                     <li>
                         <h1 className="text-2xl flex justify-center"><b>MatchTic</b></h1>
-                    
+
                     </li>
                     <li>
-                        <Link to="/" replace className="flex items-center gap-1">
+                        <Link to="/Dashboard" replace className="flex items-center gap-1">
                             <FaHome />
                             Inicio
                         </Link>
                     </li>
-                    
+
                     {/* Aqui va validacion de visualizacion */}
                     <li>
                         <Link to="/Dashboard/GenerateTuto" replace className="flex items-center gap-1">
@@ -50,7 +50,7 @@ export function NavBar() {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/Dashboard/Estadisticas" replace className="flex items-center gap-1">
+                        <Link to="/Dashboard/StudentSchedule" replace className="flex items-center gap-1">
                             <MdPersonSearch />
                             Buscar horario estudiante
                         </Link>
@@ -58,6 +58,14 @@ export function NavBar() {
 
                     {/*Hasta aqui va validacion de visualizacion */}
 
+
+                    <li>
+                        <Link to="/Dashboard/Person" replace className="flex items-center gap-1">
+                            <MdPersonSearch />
+                            Estudiante
+                        </Link>
+                    </li>
+                   
                     <li>
                         <Link to="/Dashboard/Reporte" replace className="flex items-center gap-1">
                             <FaBook />
@@ -103,8 +111,8 @@ export function NavBar() {
 
     return (
         <div>
-            <Button onClick={() => setState(true)} style={{padding: '0', minWidth: '10vh', marginTop:'3vh'}}>
-                <FaThList style={{ fontSize: '5vh', color: 'black'}} />
+            <Button onClick={() => setState(true)} style={{ padding: '0', minWidth: '10vh', marginTop: '3vh' }}>
+                <FaThList style={{ fontSize: '5vh', color: 'black' }} />
             </Button>
             <SwipeableDrawer
                 anchor='left'
